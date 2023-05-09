@@ -5,7 +5,8 @@ import RootNavigator from './navigator/RootNavigator';
 import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
 
 const client = new ApolloClient({
-  uri: 'https://dashboard.stepzen.com/explorer?endpoint=api%2Fknobby-gecko',
+  uri: 'https://bongor.stepzen.net/api/knobby-gecko/__graphql',
+  headers: {'Authorization':'apikey bongor::stepzen.io+1000::7d1d02875e48fc1c1ee886f77030226ddd06100b333543fcae3f724b1a30b877'},
   cache: new InMemoryCache(),
 });
 

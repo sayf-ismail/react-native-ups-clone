@@ -10,7 +10,7 @@ const useCustomerOrders = (userId: string) => {
   useEffect(() => {
     if (!data) return;
 
-    const orders: Order[] = data.getOrders.map(({value}: OrderResponse) => ({
+    const orders: Order[] = data?.getOrders.map(({value}: OrderResponse) => ({
       carrier: value.carrier,
       createdAt: value.createdAt,
       shippingCost: value.shippingCost,
@@ -22,7 +22,7 @@ const useCustomerOrders = (userId: string) => {
       Lng: value.Lng,
   }))
 
-  const customerOrders = orders.filter(order => order.trackingItems.customer_id === userId)
+  const customerOrders = orders?.filter(order => order?.trackingItems?.customer_id === userId)
 
   setOrders(customerOrders);
   }, [data, userId]) // because we're using userId, we need to add it to the dependency array - any var externally that we use in our useEffect
