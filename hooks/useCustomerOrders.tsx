@@ -22,6 +22,7 @@ const useCustomerOrders = (userId: string) => {
       Lng: value.Lng,
   }))
 
+  console.log(orders);
   const customerOrders = orders?.filter(order => order?.trackingItems?.customer_id === userId)
 
   setOrders(customerOrders);

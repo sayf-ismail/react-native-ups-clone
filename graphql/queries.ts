@@ -24,7 +24,7 @@ export const GET_ORDERS = gql`
         createdAt
         shippingCost
         trackingId
-        trackingitems {
+        trackingItems {
           customer {
             email
             name

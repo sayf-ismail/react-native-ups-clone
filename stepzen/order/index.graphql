@@ -7,7 +7,7 @@ type Order {
   City: String
   Lat: Float
   Lng: Float
-  trackingitems: TrackingItems
+  trackingItems: TrackingItems
     @materializer(
       query: "getTrackingItemsById"
       arguments: [{ name: "id", field: "trackingId" }]
