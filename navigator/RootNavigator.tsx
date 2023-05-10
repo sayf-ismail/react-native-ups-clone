@@ -7,7 +7,7 @@ import OrderScreen from '../screens/OrderScreen';
 export type RootStackParamList = {
   Main: undefined; // no props
   MyModal: { userId: string; name: string};
-  Order: { order: any }; // todo: define order type
+  Order: { order: Order }; // todo: define order type
 }
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
@@ -26,7 +26,7 @@ const RootNavigator = () => {
       </RootStack.Group>
 
       <RootStack.Group>
-        <RootStack.Screen name="MyModal" component={OrderScreen} />
+        <RootStack.Screen name="Order" component={OrderScreen} />
       </RootStack.Group>
     </RootStack.Navigator>
   )
